@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -24,6 +25,14 @@ module.exports = {
         test: /\.json$/,
         loader: 'json',
       },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css-loader'),
+      },
+      {
+        test: /\.(?:png|jpg|gif|svg|ttf|eot|woff2?)(?:\?[a-z0-9=&.]+)?$/,
+        loader: 'file-loader?name=[name].[ext]',
+      },
     ],
   },
   entry: {
@@ -40,6 +49,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       riot: 'riot'
     }),
+    new ExtractTextPlugin('[name].css', {allChunks: true}),
   ],
   resolve: {
     extensions: ['', '.js', '.tag'],
