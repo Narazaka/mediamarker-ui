@@ -1,7 +1,11 @@
-<mm-app>
-  <p>Hi { message() }</p>
+mm-app
+  p Hi {a.message()}
 
-  this.message = () => {
-    return 'there';
-  };
-</mm-app>
+  script.
+    class A {
+      message() {
+        return "there!";
+      }
+    }
+
+    this.a = new A();

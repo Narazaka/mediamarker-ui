@@ -10,6 +10,7 @@ module.exports = {
         loader: 'riotjs-loader',
         query: {
           type: 'babel',
+          template: 'pug',
         },
       },
     ],
