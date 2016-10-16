@@ -5,6 +5,7 @@ bower_components
 npm-debug.log
 /coverage
 /doc
+/app
 /.*
 appveyor.yml
 gulpfile.babel.js
