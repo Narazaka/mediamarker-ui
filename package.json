@@ -9,7 +9,7 @@
     "riot": "^2.6.4"
   },
   "scripts": {
-    "pug": "pug src/*.pug -o app",
+    "pug": "pug src/index.pug -o app",
     "js": "webpack"
   },
   "devDependencies": {
