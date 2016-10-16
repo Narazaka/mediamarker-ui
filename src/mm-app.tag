@@ -1,5 +1,8 @@
 mm-app
-  p Hi {a.message()}
+  ons-page
+    ons-toolbar
+      .center Hello, Onsen UI
+    p Hi {a.message()}
 
   script.
     class A {
